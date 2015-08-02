@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LKTwitterKit"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "A small Twitter library written in Swift"
   s.description  = "LKTwitterKit is a library that allows you to access some basic Twitter features (tweet, follow, etc.) in your iOS app"
   s.homepage     = "http://github.com/lukaskollmer/LKTwitterKit"
