@@ -43,7 +43,7 @@ public var LKTwitterKitVersionNumber: Double = 1.0
 /*
 Class for perfoeming some basic Twitter actions (tweet, follow, etc.)
 */
-public class Twitter {
+public class Twitter: NSObject {
     /*
     Required. Needed to present a list of accounts if more than one acount is set up on the device
     */
@@ -56,7 +56,7 @@ public class Twitter {
 
     /*
     Follow someone
-    
+
     :param: username The username of the account you wish to follow
     :param: completionHandler A closure which is called when the follow action is performed.
     :param: success A Bool indicating wheter the action was successfull
@@ -79,7 +79,7 @@ public class Twitter {
 
     /*
     Unfollow someone
-    
+
     :param: username The username of the account you wish to unfollow
     :param: completionHandler A closure which is called when the unfollow action is performed.
     :param: success A Bool indicating wheter the action was successfull
@@ -98,7 +98,7 @@ public class Twitter {
 
     /*
     Check if the account is currently following a certain user
-    
+
     :param: username The username of the account you want to check for
     :param: completionHandler A closure which is called when the check action is performed.
     :param: success A Bool indicating wheter the user is following the account
@@ -122,7 +122,7 @@ public class Twitter {
 
     /*
     Tweet something
-    
+
     :param: text The text you wish to tweet
     :param: completionHandler A closure which is called when the tweet action is performed.
     :param: success A Bool indicating wheter the action was successfull
@@ -143,7 +143,7 @@ public class Twitter {
 
     /*
     Make a request to the Twitter API
-    
+
     :param: requestType The kind of action you wish to perform (Tweet, Follow, etc.)
     :param: parameters The parameters you wish to send with the request
     :param: urlEndpoint The enspoint of the API you wish to hit
@@ -184,9 +184,9 @@ public class Twitter {
 
     /*
     Get the Twitter account configured in settings
-    
+
     Note: If only one account is configured, this account will be returned in the closure. If more than one accounts are configured, an AlertView will be shown, prompting the user to select an account. That is the reason why the viewController property is necessary
-    
+
     :param: username The username of the account you wich to follow
     :param: completionHandler A closure which is called when the follow action is performed.
     :param: success A Bool indicating wheter the action was successfull

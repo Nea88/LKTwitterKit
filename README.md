@@ -20,6 +20,9 @@ it, simply add the following line to your Podfile:
 pod "LKTwitterKit"
 ```
 
+## Usage
+
+
 ## Author
 
 Lukas Kollmer, lukas@kollmer.me
