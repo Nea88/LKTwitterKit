@@ -12,7 +12,7 @@ import Accounts
 import Social
 
 
-/*
+/**
 The kind of request you want to make
 */
 internal enum TwitterRequestType {
@@ -22,7 +22,7 @@ internal enum TwitterRequestType {
     case Tweet
 }
 
-/*
+/**
 Extension for creating the correct kind of SLRequestMethod from a value of TwitterRequestType
 */
 internal extension SLRequestMethod {
@@ -40,21 +40,21 @@ internal extension SLRequestMethod {
 
 public var LKTwitterKitVersionNumber: Double = 1.0
 
-/*
-Class for perfoeming some basic Twitter actions (tweet, follow, etc.)
+/**
+Class for performing some basic Twitter actions (tweet, follow, etc.)
 */
 public class Twitter: NSObject {
-    /*
+    /**
     Required. Needed to present a list of accounts if more than one acount is set up on the device
     */
     public static var viewController: UIViewController?
 
-    /*
+    /**
     You can specify an account which will be used for all actions
     */
     public static var defaultAccount: ACAccount?
 
-    /*
+    /**
     Follow someone
 
     :param: username The username of the account you wish to follow
@@ -77,7 +77,7 @@ public class Twitter: NSObject {
 
     }
 
-    /*
+    /**
     Unfollow someone
 
     :param: username The username of the account you wish to unfollow
@@ -96,7 +96,7 @@ public class Twitter: NSObject {
         }
     }
 
-    /*
+    /**
     Check if the account is currently following a certain user
 
     :param: username The username of the account you want to check for
@@ -120,7 +120,7 @@ public class Twitter: NSObject {
 
 
 
-    /*
+    /**
     Tweet something
 
     :param: text The text you wish to tweet
@@ -141,7 +141,7 @@ public class Twitter: NSObject {
 
 
 
-    /*
+    /**
     Make a request to the Twitter API
 
     :param: requestType The kind of action you wish to perform (Tweet, Follow, etc.)
@@ -182,7 +182,7 @@ public class Twitter: NSObject {
     }
 
 
-    /*
+    /**
     Get the Twitter account configured in settings
 
     Note: If only one account is configured, this account will be returned in the closure. If more than one accounts are configured, an AlertView will be shown, prompting the user to select an account. That is the reason why the viewController property is necessary
